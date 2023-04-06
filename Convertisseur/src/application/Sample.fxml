@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Masse">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtM1" layoutX="60.0" layoutY="108.0" onKeyReleased="#ConvertM1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtM2" layoutX="353.0" layoutY="108.0" onKeyReleased="#ConvertM2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboM1" layoutX="79.0" layoutY="165.0" onAction="#ConvertM1" prefWidth="150.0" />
+                        <ComboBox fx:id="cboM2" layoutX="372.0" layoutY="165.0" onAction="#ConvertM1" prefWidth="150.0" />
+                        <Button fx:id="btnEff1" layoutX="268.0" layoutY="211.0" mnemonicParsing="false" text="Effacer" />
+                        <Button fx:id="btnQuit1" layoutX="514.0" layoutY="309.0" mnemonicParsing="false" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Angle du Plan">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtAP1" layoutX="68.0" layoutY="113.0" onKeyReleased="#ConvertAP1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtAP2" layoutX="345.0" layoutY="113.0" onKeyReleased="#ConvertAP2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboAP1" layoutX="87.0" layoutY="165.0" onAction="#ConvertAP1" prefWidth="150.0" />
+                        <ComboBox fx:id="cboAP2" layoutX="364.0" layoutY="165.0" onAction="#ConvertAP1" prefWidth="150.0" />
+                        <Button fx:id="btnEff2" layoutX="268.0" layoutY="210.0" mnemonicParsing="false" text="Effacer" />
+                        <Button fx:id="btnQuit2" layoutX="514.0" layoutY="310.0" mnemonicParsing="false" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Energie">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtE1" layoutX="57.0" layoutY="111.0" onKeyReleased="#ConvertE1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtE2" layoutX="354.0" layoutY="111.0" onKeyReleased="#ConvertE2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboE1" layoutX="76.0" layoutY="165.0" onAction="#ConvertE1" prefWidth="150.0" />
+                        <ComboBox fx:id="cboE2" layoutX="373.0" layoutY="165.0" onAction="#ConvertE1" prefWidth="150.0" />
+                        <Button fx:id="btnEff3" layoutX="268.0" layoutY="208.0" mnemonicParsing="false" text="Effacer" />
+                        <Button fx:id="btnQuit3" layoutX="515.0" layoutY="307.0" mnemonicParsing="false" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
