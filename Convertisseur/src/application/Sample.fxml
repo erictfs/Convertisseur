@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -14,12 +15,27 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="txtM1" layoutX="60.0" layoutY="108.0" onKeyReleased="#ConvertM1" onKeyTyped="#verifNum" />
-                        <TextField fx:id="txtM2" layoutX="353.0" layoutY="108.0" onKeyReleased="#ConvertM2" onKeyTyped="#verifNum" />
-                        <ComboBox fx:id="cboM1" layoutX="79.0" layoutY="165.0" onAction="#ConvertM1" prefWidth="150.0" />
-                        <ComboBox fx:id="cboM2" layoutX="372.0" layoutY="165.0" onAction="#ConvertM1" prefWidth="150.0" />
-                        <Button fx:id="btnEff1" layoutX="268.0" layoutY="211.0" mnemonicParsing="false" text="Effacer" />
-                        <Button fx:id="btnQuit1" layoutX="514.0" layoutY="309.0" mnemonicParsing="false" text="Quitter" />
+                        <ImageView fitHeight="267.0" fitWidth="395.0" layoutX="7.0" layoutY="109.0">
+                           <image>
+                              <Image url="@../../../../../OneDrive/Desktop/Mass.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtM1" layoutX="60.0" layoutY="117.0" onKeyReleased="#ConvertM1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtM2" layoutX="353.0" layoutY="117.0" onKeyReleased="#ConvertM2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboM1" layoutX="79.0" layoutY="174.0" onAction="#M" prefWidth="150.0" />
+                        <ComboBox fx:id="cboM2" layoutX="372.0" layoutY="174.0" onAction="#M" prefWidth="150.0" />
+                        <Button fx:id="btnEff1" layoutX="268.0" layoutY="220.0" mnemonicParsing="false" onAction="#Clear" text="Effacer" />
+                        <Button fx:id="btnQuit1" layoutX="514.0" layoutY="309.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                        <Text layoutX="288.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="155.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur de Masse">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
             </content>
@@ -28,26 +44,56 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="txtAP1" layoutX="68.0" layoutY="113.0" onKeyReleased="#ConvertAP1" onKeyTyped="#verifNum" />
-                        <TextField fx:id="txtAP2" layoutX="345.0" layoutY="113.0" onKeyReleased="#ConvertAP2" onKeyTyped="#verifNum" />
-                        <ComboBox fx:id="cboAP1" layoutX="87.0" layoutY="165.0" onAction="#ConvertAP1" prefWidth="150.0" />
-                        <ComboBox fx:id="cboAP2" layoutX="364.0" layoutY="165.0" onAction="#ConvertAP1" prefWidth="150.0" />
-                        <Button fx:id="btnEff2" layoutX="268.0" layoutY="210.0" mnemonicParsing="false" text="Effacer" />
-                        <Button fx:id="btnQuit2" layoutX="514.0" layoutY="310.0" mnemonicParsing="false" text="Quitter" />
+                        <ImageView fitHeight="180.0" fitWidth="210.0" layoutX="-15.0" layoutY="181.0">
+                           <image>
+                              <Image url="@../../../../../OneDrive/Desktop/Screenshot%202023-04-08%20112909.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtAP1" layoutX="68.0" layoutY="121.0" onKeyReleased="#ConvertAP1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtAP2" layoutX="345.0" layoutY="121.0" onKeyReleased="#ConvertAP2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboAP1" layoutX="87.0" layoutY="173.0" onAction="#AP" prefWidth="150.0" />
+                        <ComboBox fx:id="cboAP2" layoutX="364.0" layoutY="173.0" onAction="#AP" prefWidth="150.0" />
+                        <Button fx:id="btnEff2" layoutX="268.0" layoutY="218.0" mnemonicParsing="false" onAction="#Clear" text="Effacer" />
+                        <Button fx:id="btnQuit2" layoutX="514.0" layoutY="310.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                        <Text layoutX="287.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="114.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur d'Angle du Plan">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Energie">
+            <Tab text="Énergie">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="txtE1" layoutX="57.0" layoutY="111.0" onKeyReleased="#ConvertE1" onKeyTyped="#verifNum" />
-                        <TextField fx:id="txtE2" layoutX="354.0" layoutY="111.0" onKeyReleased="#ConvertE2" onKeyTyped="#verifNum" />
-                        <ComboBox fx:id="cboE1" layoutX="76.0" layoutY="165.0" onAction="#ConvertE1" prefWidth="150.0" />
-                        <ComboBox fx:id="cboE2" layoutX="373.0" layoutY="165.0" onAction="#ConvertE1" prefWidth="150.0" />
-                        <Button fx:id="btnEff3" layoutX="268.0" layoutY="208.0" mnemonicParsing="false" text="Effacer" />
-                        <Button fx:id="btnQuit3" layoutX="515.0" layoutY="307.0" mnemonicParsing="false" text="Quitter" />
+                        <ImageView fitHeight="199.0" fitWidth="322.0" layoutX="2.0" layoutY="167.0">
+                           <image>
+                              <Image url="@../../../../../OneDrive/Desktop/Screenshot%202023-04-08%20114339.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtE1" layoutX="57.0" layoutY="123.0" onKeyReleased="#ConvertE1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtE2" layoutX="354.0" layoutY="123.0" onKeyReleased="#ConvertE2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboE1" layoutX="76.0" layoutY="177.0" onAction="#E" prefWidth="150.0" />
+                        <ComboBox fx:id="cboE2" layoutX="373.0" layoutY="177.0" onAction="#E" prefWidth="150.0" />
+                        <Button fx:id="btnEff3" layoutX="268.0" layoutY="220.0" mnemonicParsing="false" onAction="#Clear" text="Effacer" />
+                        <Button fx:id="btnQuit3" layoutX="515.0" layoutY="307.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                        <Text layoutX="286.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="155.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur d'Énergie">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
               </content>
