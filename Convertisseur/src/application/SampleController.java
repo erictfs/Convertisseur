@@ -172,7 +172,7 @@ public class SampleController implements Initializable
     {
     	try {
     		//Convertit la valeur dans le TextField de String en Integer.
-    		int b=Integer.parseInt(a.getText());
+    		double b=Double.parseDouble(a.getText());
     	//Attrape l'exception NumberFormatException et crée un alerte d'erreur.
     	} catch (NumberFormatException e) 
     	{
